@@ -8,7 +8,7 @@
     <title>Ice-UI</title>
     <style>
         *{margin: 0;padding: 0;box-sizing: border-box}
-        :root{
+        html {
             --button-height:32px;
             --font-size:14px;
             --button-bg:white;
@@ -25,11 +25,20 @@
             font-size: var(--font-size);
         }
     </style>
+    <style>
+        .icon{
+            width: 1em;
+            height: 1em;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
-    <g-button></g-button>
+    <g-button>我爱JS</g-button>
+    <g-button icon = "settings">我爱JS</g-button>
+    <g-button icon = "settings" icon-position="right">我爱JS</g-button>
 </div>
 <script src="src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1986870_bbl3tmkr3yi.js"></script>
 </body>
 </html>
