@@ -8,7 +8,9 @@
     </button>
 </template>
 <script>
+    import Icon from './icon.vue'   // 全局注册的 Icon 在单元测试时并不可用
     export default {
+        components:{'g-icon':Icon},
         props:{
             icon:{},
             loading:{
