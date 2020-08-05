@@ -50,7 +50,7 @@
         &:focus {
             outline: none;
         }
-        > .content{order: 2;}
+        > .content{order: 2;line-height: var(--font-size)}  // 不加行高 文字没法和 icon 对齐，应该是浏览器问题吧...
         > .icon{order: 1;margin-right: .1em;}
 
         &.icon-right{
