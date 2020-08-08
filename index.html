@@ -41,7 +41,9 @@
 <body>
 <div id="app">
   <div class="box">
-    <g-input value="王老吉" @change="inputChange"></g-input>
+    <g-input v-model="message"></g-input>
+    <p>{{message}}</p>
+    <button @click="message+=2">按钮</button>
   </div>
   <div class="box">
     <g-button :loading="loading1" @click="loading1 = !loading1">
