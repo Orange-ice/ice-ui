@@ -36,9 +36,18 @@ new Vue({
     message:'hello'
   },
   methods:{
-    showToast(){
+    showToast1(){
+      this.showToast('top')
+    },
+    showToast2(){
+      this.showToast('middle')
+    },
+    showToast3(){
+      this.showToast('bottom')
+    },
+    showToast(position){
       this.$toast(`你的智商为${parseInt(Math.random() * 100)}`,{
-        position:'top',
+        position,
         closeButton: {
           text:'知道了',
           callback(toast){
