@@ -23,22 +23,25 @@ describe('Toast', () => {
         done()
       })
     })
-    // it('接收 closeButton',()=>{
-    //   const callback = sinon.fake()
-    //   const Constructor = Vue.extend(Toast)
-    //   const vm = new Constructor({
-    //     propsData:{
-    //       closeButton:{
-    //         text:'关闭',
-    //         callback
-    //       }
-    //     }
-    //   }).$mount()
-    //   let closeButton = vm.$el.querySelector('.close')
-    //   expect(closeButton.textContent.trim()).to.equal('关闭')
-    //   closeButton.click()
-    //   expect(callback).to.have.been.called
-    // })
+    it('接收 closeButton',(done)=>{
+      const callback = sinon.fake()
+      const Constructor = Vue.extend(Toast)
+      const vm = new Constructor({
+        propsData:{
+          closeButton:{
+            text:'关闭',
+            callback
+          }
+        }
+      }).$mount()
+      let closeButton = vm.$el.querySelector('.close')
+      expect(closeButton.textContent.trim()).to.equal('关闭')
+      setTimeout(()=>{
+        closeButton.click()   // mount 之后马上 click关闭 会导致toast出现马上消失， toast.vue里 updateStyles 方法就获取不到 line 的style。
+        expect(callback).to.have.been.called
+        done()
+      },200)
+    })
     it('接收 enableHtml',()=>{
       const Constructor = Vue.extend(Toast)
       const vm = new Constructor({
