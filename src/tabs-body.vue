@@ -6,6 +6,9 @@
 <script>
 export default {
   name:'IceTabsBody',
+  inject:['eventBus'],
+  created() {
+  }
 }
 </script>
 <style></style>
