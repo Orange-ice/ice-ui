@@ -47,7 +47,6 @@ $blue:blue;
   flex-shrink: 0;
   padding: 0 1em;
   cursor: pointer;
-  border: solid 1px green;
   height: 100%;
   display: flex;
   align-items: center;
