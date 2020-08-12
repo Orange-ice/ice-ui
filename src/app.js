@@ -12,6 +12,11 @@ import Sider from './sider'
 import Content from './content'
 import Toast from './toast'
 import plugin from './plugin.js'
+import Tabs from './tabs'
+import TabsHead from './tabs-head'
+import TabsBody from './tabs-body'
+import TabsItem from './tabs-item'
+import TabsPane from './tabs-pane'
 
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
@@ -26,14 +31,16 @@ Vue.component('g-content',Content)
 Vue.component('g-footer',Footer)
 Vue.component('g-toast',Toast)
 Vue.use(plugin)
+Vue.component('g-tabs',Tabs)
+Vue.component('g-tabs-head',TabsHead)
+Vue.component('g-tabs-body',TabsBody)
+Vue.component('g-tabs-item',TabsItem)
+Vue.component('g-tabs-pane',TabsPane)
 
 new Vue({
   el: '#app',
   data: {
-    loading1: false,
-    loading2: true,
-    loading3: false,
-    message:'hello'
+    selectedTab:'third'
   },
   methods:{
     showToast1(){

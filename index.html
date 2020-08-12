@@ -35,9 +35,24 @@
 </head>
 <body>
 <div id="app">
-  <button @click="showToast1">按钮</button>
-  <button @click="showToast2">按钮</button>
-  <button @click="showToast3">按钮</button>
+  <g-tabs :selected.sync="selectedTab">
+    <g-tabs-head>
+      <template slot="actions">
+        <button>设置</button>
+      </template>
+      <g-tabs-item name="first">
+        <g-icon name="settings"></g-icon>
+        周一
+      </g-tabs-item>
+      <g-tabs-item name="second">周二</g-tabs-item>
+      <g-tabs-item name="third">周三</g-tabs-item>
+    </g-tabs-head>
+    <g-tabs-body>
+      <g-tabs-pane name="first">周一相关资讯</g-tabs-pane>
+      <g-tabs-pane name="second">周二相关资讯</g-tabs-pane>
+      <g-tabs-pane name="third">周三相关资讯</g-tabs-pane>
+    </g-tabs-body>
+  </g-tabs>
 </div>
 <script src="src/app.js"></script>
 </body>
