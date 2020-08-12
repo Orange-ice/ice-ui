@@ -11,9 +11,11 @@
 export default {
   name:'IceTabsHead',
   inject:['eventBus'],
-  created() {
+  mounted() {
     this.eventBus.$on('update:selected',(item,vm)=>{
-      console.log(item)
+      let {width,height,top,left} = vm.$el.getBoundingClientRect()
+      this.$refs.line.style.width = `${width}px`
+      this.$refs.line.style.left = `${left}px`
     })
   }
 }
@@ -22,7 +24,6 @@ export default {
 $blue:blue;
 $tab-height:40px;
 .tabs-head{
-  border: 1px solid red;
   display: flex;
   height: $tab-height;
   justify-content: flex-start;
@@ -31,7 +32,7 @@ $tab-height:40px;
     position: absolute;
     bottom: 0;
     border-bottom: 1px solid $blue;
-    width: 100px;
+    transition: all 350ms;
   }
   > .actions-wrapper{
     margin-left: auto;
