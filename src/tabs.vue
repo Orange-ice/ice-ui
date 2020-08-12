@@ -31,9 +31,15 @@ export default {
     }
   },
   mounted() {
-    // this.$emit('update:selected','这是 this ￥emit 出来的数据')
-    this.eventBus.$emit('update:selected',this.selected)
-    // this.$emit('update:selected','xxx')
+    this.$children.forEach((vm)=>{
+      if(vm.$options.name === 'IceTabsHead'){
+        vm.$children.forEach((childVm)=>{
+          if(childVm.$options.name === 'IceTabsItem' && childVm.name ===this.selected){
+            this.eventBus.$emit('update:selected',this.selected,childVm)
+          }
+        })
+      }
+    })
   }
 }
 </script>
