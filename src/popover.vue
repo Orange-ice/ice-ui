@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click="onClick" ref="popover">
+  <div class="popover" ref="popover">
     <div ref="contentWrapper" class="content-wrapper" v-if="visible"
          :class="{[`position-${position}`]:true}">
       <slot name="content"></slot>
@@ -11,71 +11,90 @@
 </template>
 <script>
 export default {
-  name:'IcePopover',
-  data(){
-    return {visible:false}
+  name: 'IcePopover',
+  data() {
+    return {visible: false}
   },
-  props:{
-    position:{
-      type:String,
-      default:'top',
-      validator(value){
-        return ['top','bottom','left','right'].indexOf(value) >= 0
+  mounted() {
+    if (this.trigger === 'click') {
+      this.$refs.popover.addEventListener('click', this.onClick)
+    } else {
+      this.$refs.popover.addEventListener('mouseenter', this.open)
+      this.$refs.popover.addEventListener('mouseleave', this.close)
+    }
+  },
+  props: {
+    position: {
+      type: String,
+      default: 'top',
+      validator(value) {
+        return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
+      }
+    },
+    trigger: {
+      type: String,
+      default: 'click',
+      validator(value) {
+        return ['click', 'hover'].indexOf(value) >= 0
       }
     }
   },
-  methods:{
-    positionContent(){
-      const {contentWrapper,triggerWrapper} = this.$refs
+  methods: {
+    positionContent() {
+      const {contentWrapper, triggerWrapper} = this.$refs
       document.body.appendChild(contentWrapper)
-      const {width,height,top,left} = triggerWrapper.getBoundingClientRect()
-      const {height:height2} = contentWrapper.getBoundingClientRect()
-      const positions={
-        top:{
-          top:top + window.scrollY,
-          left:left + window.scrollX
+      const {width, height, top, left} = triggerWrapper.getBoundingClientRect()
+      const {height: height2} = contentWrapper.getBoundingClientRect()
+      const positions = {
+        top: {
+          top: top + window.scrollY,
+          left: left + window.scrollX
         },
-        bottom:{
-          top:top + height + window.scrollY,
-          left:left + window.scrollX
+        bottom: {
+          top: top + height + window.scrollY,
+          left: left + window.scrollX
         },
-        left:{
-          top:top + window.scrollY + (height-height2)/2,
-          left:left + window.scrollX
+        left: {
+          top: top + window.scrollY + (height - height2) / 2,
+          left: left + window.scrollX
         },
-        right:{
-          top:top + window.scrollY + (height-height2)/2,
-          left:left + width + window.scrollX
+        right: {
+          top: top + window.scrollY + (height - height2) / 2,
+          left: left + width + window.scrollX
         }
       }
       contentWrapper.style.top = positions[this.position].top + 'px'
-      contentWrapper.style.left =positions[this.position].left  + 'px'
+      contentWrapper.style.left = positions[this.position].left + 'px'
     },
-    onClickDocument(e){
-      if(this.$refs.popover &&
+    onClickDocument(e) {
+      if (this.$refs.popover &&
           (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))
-      ){return}
-      if(this.$refs.contentWrapper &&
+      ) {
+        return
+      }
+      if (this.$refs.contentWrapper &&
           (this.$refs.contentWrapper === e.target || this.$refs.contentWrapper.contains(e.target))
-      ){return}
+      ) {
+        return
+      }
       this.close()
     },
-    open(){
+    open() {
       this.visible = true
-      this.$nextTick(()=>{
+      this.$nextTick(() => {
         this.positionContent()
-        document.addEventListener('click',this.onClickDocument)
+        document.addEventListener('click', this.onClickDocument)
       })
     },
-    close(){
+    close() {
       this.visible = false
-      document.removeEventListener('click',this.onClickDocument)
+      document.removeEventListener('click', this.onClickDocument)
     },
-    onClick(event){
-      if(this.$refs.triggerWrapper.contains(event.target)){
-        if(this.visible === true){
+    onClick(event) {
+      if (this.$refs.triggerWrapper.contains(event.target)) {
+        if (this.visible === true) {
           this.close()
-        }else{
+        } else {
           this.open()
         }
       }
@@ -84,23 +103,24 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-$border-color:#333;
-$border-radius:4px;
-.popover{
+$border-color: #333;
+$border-radius: 4px;
+.popover {
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
-.content-wrapper{
+
+.content-wrapper {
   position: absolute;
   border: solid 1px $border-color;
   border-radius: $border-radius;
-  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
   background: white;
   padding: .5em 1em;
   max-width: 20em;
   word-break: break-all;
-  &::before,&::after{
+  &::before, &::after {
     content: '';
     display: block;
     border: solid 10px transparent;
@@ -109,62 +129,62 @@ $border-radius:4px;
     position: absolute;
     //left: 10px;
   }
-  &.position-top{
+  &.position-top {
     transform: translateY(-100%);
     margin-top: -10px;
-    &::before,&::after{
+    &::before, &::after {
       left: 10px;
     }
-    &::before{
+    &::before {
       border-top-color: black;
-      top:100%
+      top: 100%
     }
-    &::after{
+    &::after {
       border-top-color: white;
       top: calc(100% - 1px);
     }
   }
-  &.position-bottom{
+  &.position-bottom {
     margin-top: 10px;
-    &::before,&::after{
+    &::before, &::after {
       left: 10px;
     }
-    &::before{
+    &::before {
       border-bottom-color: black;
-      bottom:100%
+      bottom: 100%
     }
-    &::after{
+    &::after {
       border-bottom-color: white;
       bottom: calc(100% - 1px);
     }
   }
-  &.position-left{
+  &.position-left {
     transform: translateX(-100%);
     margin-left: -10px;
-    &::before,&::after{
+    &::before, &::after {
       transform: translateY(-50%);
       top: 50%;
     }
-    &::before{
+    &::before {
       border-left-color: black;
-      left:100%
+      left: 100%
     }
-    &::after{
+    &::after {
       border-left-color: white;
       left: calc(100% - 1px);
     }
   }
-  &.position-right{
+  &.position-right {
     margin-left: 10px;
-    &::before,&::after{
+    &::before, &::after {
       transform: translateY(-50%);
       top: 50%;
     }
-    &::before{
+    &::before {
       border-right-color: black;
-      right:100%
+      right: 100%
     }
-    &::after{
+    &::after {
       border-right-color: white;
       right: calc(100% - 1px);
     }
