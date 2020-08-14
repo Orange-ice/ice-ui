@@ -43,8 +43,9 @@
       <g-button>按钮</g-button>
     </g-popover>
     <g-popover position="bottom">
-      <template slot="content">
-        <div>popover 内容dshfjkhsdjfghiowejffksdjfjskdfjksdjf</div>
+      <template slot="content" slot-scope="{close}">
+        <div>popover 内容</div>
+        <g-button @click="close">关闭</g-button>
       </template>
       <g-button>按钮</g-button>
     </g-popover>
@@ -56,7 +57,7 @@
     </g-popover>
     <g-popover position="right">
       <template slot="content">
-        <div>popover 内容</div>
+        <div>popover 内容<a href="//baidu.com">百度</a></div>
       </template>
       <g-button>按钮</g-button>
     </g-popover>
