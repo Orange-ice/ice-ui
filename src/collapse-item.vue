@@ -1,6 +1,6 @@
 <template>
   <div class="collapseItem">
-    <div class="title" @click="open=!open">
+    <div class="title" @click="toggle" :data-name ="name">
       {{title}}
     </div>
     <div class="content" v-if="open">
@@ -15,6 +15,10 @@ export default {
     title:{
       type:String,
       required:true
+    },
+    name:{
+      type:String,
+      required: true
     }
   },
   data(){
@@ -22,6 +26,21 @@ export default {
       open:false
     }
   },
+  inject:['eventBus'],
+  mounted() {
+    this.eventBus && this.eventBus.$on('update:selected',(names)=>{
+      this.open = (names.indexOf(this.name) >= 0);
+    })
+  },
+  methods:{
+    toggle(){
+      if(this.open){
+        this.eventBus && this.eventBus.$emit('update:removeSelected',this.name)
+      }else{
+        this.eventBus && this.eventBus.$emit('update:addSelected',this.name)
+      }
+    }
+  }
 }
 </script>
 <style scoped lang="scss">
