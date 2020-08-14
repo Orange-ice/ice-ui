@@ -29,21 +29,27 @@ export default {
       const {contentWrapper,triggerWrapper} = this.$refs
       document.body.appendChild(contentWrapper)
       const {width,height,top,left} = triggerWrapper.getBoundingClientRect()
-      if(this.position === 'top'){
-        contentWrapper.style.left = left + window.scrollX + 'px'
-        contentWrapper.style.top = top + window.scrollY + 'px'
-      }else if(this.position === 'bottom'){
-        contentWrapper.style.left = left + window.scrollX + 'px'
-        contentWrapper.style.top = top + height + window.scrollY + 'px'
-      }else if(this.position === 'left'){
-        contentWrapper.style.left = left + window.scrollX + 'px'
-        const {height:height2} = contentWrapper.getBoundingClientRect()
-        contentWrapper.style.top = top + window.scrollY + (height-height2)/2 +'px'
-      } else if(this.position === 'right'){
-        contentWrapper.style.left = left + width + window.scrollX + 'px'
-        const {height:height2} = contentWrapper.getBoundingClientRect()
-        contentWrapper.style.top = top + window.scrollY + (height-height2)/2 +'px'
+      const {height:height2} = contentWrapper.getBoundingClientRect()
+      const positions={
+        top:{
+          top:top + window.scrollY,
+          left:left + window.scrollX
+        },
+        bottom:{
+          top:top + height + window.scrollY,
+          left:left + window.scrollX
+        },
+        left:{
+          top:top + window.scrollY + (height-height2)/2,
+          left:left + window.scrollX
+        },
+        right:{
+          top:top + window.scrollY + (height-height2)/2,
+          left:left + width + window.scrollX
+        }
       }
+      contentWrapper.style.top = positions[this.position].top + 'px'
+      contentWrapper.style.left =positions[this.position].left  + 'px'
     },
     onClickDocument(e){
       if(this.$refs.popover &&
