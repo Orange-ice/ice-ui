@@ -51,8 +51,7 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-$grey:#ddd;
-$border-radius:4px;
+@import "helper";
 .collapse{
   border: 1px solid $grey;
   border-radius: 4px;
