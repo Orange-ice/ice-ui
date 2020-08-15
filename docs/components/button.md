@@ -5,13 +5,13 @@ title: Button 按钮
 
 **使用方法**
 
-基本用法：
+#### 基本用法：
 
 <ClientOnly>
 <button-demos></button-demos>
 </ClientOnly>
 
-示例代码：
+#### 示例代码：
 
 ```vue
 <g-button>默认按钮</g-button>

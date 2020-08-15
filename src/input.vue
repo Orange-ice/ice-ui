@@ -4,7 +4,8 @@
            @change="$emit('change',$event.target.value)"
            @input="$emit('input',$event.target.value)"
            @blur="$emit('blur',$event.target.value)"
-           @focus="$emit('focus',$event.target.value)">
+           @focus="$emit('focus',$event.target.value)"
+    :placeholder="placeholder">
     <template v-if="error">
       <icon name="error" class="icon-error"></icon>
       <span class="errorMessage">{{ error }}</span>
@@ -18,6 +19,9 @@ export default {
   components: {Icon},
   name: 'IceInput',
   props: {
+    placeholder:{
+      type:String
+    },
     value: {
       type: String
     },
