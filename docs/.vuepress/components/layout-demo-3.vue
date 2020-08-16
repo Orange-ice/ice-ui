@@ -6,13 +6,13 @@
         sider
       </g-sider>
       <g-layout>
-        <g-header style="height: 50px; background:lightskyblue;">
+        <g-header style="height: 50px; background:#9E91F2;">
           header
         </g-header>
-        <g-content style="height: 100px; background:deepskyblue;">
+        <g-content style="height: 100px; background:#7B62D9;">
           content
         </g-content>
-        <g-footer style="height: 50px; background:lightskyblue;">
+        <g-footer style="height: 50px; background:#9E91F2;">
           footer
         </g-footer>
       </g-layout>

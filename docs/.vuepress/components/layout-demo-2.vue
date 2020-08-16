@@ -2,18 +2,18 @@
   <div style="padding-top: 16px;">
 
     <g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
-      <g-header style="height: 50px; background:lightskyblue;">
+      <g-header style="height: 50px; background:#9E91F2;">
         header
       </g-header>
       <g-layout>
         <g-sider style="height: 100px; background:#ddd; width:200px; color: black;">
           sider
         </g-sider>
-        <g-content style="height: 100px; background:deepskyblue;">
+        <g-content style="height: 100px; background:#7B62D9;">
           content
         </g-content>
       </g-layout>
-      <g-footer style="height: 50px; background:lightskyblue;">
+      <g-footer style="height: 50px; background:#9E91F2;">
         footer
       </g-footer>
     </g-layout>
