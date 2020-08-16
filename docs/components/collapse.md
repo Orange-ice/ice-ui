@@ -24,7 +24,7 @@ title: Collapse 折叠面板
 export default {
   data() {
     return {
-      selectedTab: '1'
+      selectedTab: ['1']
     }
   },
 }

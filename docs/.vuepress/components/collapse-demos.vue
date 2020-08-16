@@ -16,7 +16,7 @@ import CollapseItem from '../../../src/collapse-item'
 export default {
   data() {
     return {
-      selectedTab: '1'
+      selectedTab: ['1']
     }
   },
   components: {
