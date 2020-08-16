@@ -1,6 +1,6 @@
 <template>
   <div class="popover" ref="popover">
-    <div ref="contentWrapper" class="content-wrapper" v-if="visible"
+    <div ref="contentWrapper" class="content-wrapper ice-popover" v-if="visible"
          :class="{[`position-${position}`]:true}">
       <slot name="content" :close="close"></slot>
     </div>
