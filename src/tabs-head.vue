@@ -14,8 +14,12 @@ export default {
   mounted() {
     this.eventBus.$on('update:selected',(item,vm)=>{
       let {width,height,top,left} = vm.$el.getBoundingClientRect()
+      // console.dir(vm.$el)
+      // console.dir(vm.$el.offsetLeft)
+      // console.log(width,height,top,left)
       this.$refs.line.style.width = `${width}px`
-      this.$refs.line.style.left = `${left}px`
+      // this.$refs.line.style.left = `${left}px`
+      this.$refs.line.style.left = `${vm.$el.offsetLeft}px`
     })
   }
 }
@@ -27,7 +31,7 @@ export default {
   height: $tab-height;
   justify-content: flex-start;
   position: relative;
-  border: solid 1px $tabs-border-color;
+  border-bottom: solid 1px $tabs-border-color;
   > .line{
     position: absolute;
     bottom: 0;
