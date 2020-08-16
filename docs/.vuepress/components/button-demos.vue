@@ -1,23 +1,26 @@
 <template>
-  <div>
-    <g-button>默认按钮</g-button>
-    <g-button icon="settings">默认按钮</g-button>
-    <g-button :loading="loading" @click="loading=!loading">默认按钮</g-button>
+  <div class="wrapper">
+    <div>
+      <g-button>默认按钮</g-button>
+      <g-button icon="settings">默认按钮</g-button>
+      <g-button :loading="loading" @click="loading=!loading">默认按钮</g-button>
+    </div>
   </div>
 </template>
 <script>
 import Button from '../../../src/button'
+
 export default {
-  components:{'g-button':Button},
-  data(){
-    return{
-      loading:true
+  components: {'g-button': Button},
+  data() {
+    return {
+      loading: true
     }
   }
 }
 </script>
 <style>
-div{
+div.wrapper {
   margin-top: 10px;
 }
 </style>
