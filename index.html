@@ -36,6 +36,16 @@
 <body>
 <div id="app" style="margin: 100px;">
 
+  <div style="padding-top: 16px;">
+    <div>
+      <g-button @click="$toast('点击弹出提示')">上方弹出</g-button>
+      <g-button @click="$toast('点击弹出提示', {position:'middle'})">中间弹出</g-button>
+      <g-button @click="$toast('点击弹出提示', {position:'bottom'})">下方弹出</g-button>
+    </div>
+  </div>
+
+
+
   <div>
     <g-tabs :selected="selected">
       <g-tabs-head>
