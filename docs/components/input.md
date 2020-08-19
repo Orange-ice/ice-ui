@@ -26,7 +26,7 @@ title: Input 输入框
 <p>value: {{value}}</p>
 ```
 
-# Input Attributes
+# Attributes
 |参数| 说明 |  类型  | 可选值 | 默认值 |
 | :-------------: |:-------------:| :-----:|:-----:|:-----:|
 |value| 设置默认内容 | String |--|-- 

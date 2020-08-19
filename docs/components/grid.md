@@ -205,13 +205,15 @@ title: Grid 栅格
 </i-row>
 ```
 
-# Row Attributes
+# Attributes
+
+### Row 
 |参数| 说明 |  类型  | 可选值 | 默认值 |
 | :-------------: |:-------------:| :-----:|:-----:|:-----:|
 |gutter| 间距 | String、Number |--|0
 |position|对齐方式|String|left、center、right|left
 
-# Col Attributes
+### Col
 |参数| 说明 |  类型  | 可选值 | 默认值 |
 | :-------------: |:-------------:| :-----:|:-----:|:-----:|
 |span| 栅格占据的列数 | String、Number |1-24|--
