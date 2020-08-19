@@ -16,17 +16,17 @@ title: Layout 布局
 #### 示例代码
 
 ```vue
-<g-layout style="color: white; margin-bottom:50px;">
-    <g-header style="height: 50px; background:lightskyblue;">
+<i-layout style="color: white; margin-bottom:50px;">
+    <i-header style="height: 50px; background:lightskyblue;">
       header
-    </g-header>
-    <g-content style="height: 100px; background:deepskyblue;">
+    </i-header>
+    <i-content style="height: 100px; background:deepskyblue;">
       content
-    </g-content>
-    <g-footer style="height: 50px; background:lightskyblue;">
+    </i-content>
+    <i-footer style="height: 50px; background:lightskyblue;">
       footer
-    </g-footer>
-</g-layout>
+    </i-footer>
+</i-layout>
 ```
 
 ### 布局二
@@ -40,22 +40,22 @@ title: Layout 布局
 #### 示例代码
 
 ```vue
-<g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
-    <g-header style="height: 50px; background:lightskyblue;">
+<i-layout style="color: white; overflow:hidden; margin-bottom:50px;">
+    <i-header style="height: 50px; background:lightskyblue;">
       header
-    </g-header>
-    <g-layout>
-      <g-sider style="height: 100px; background:#ddd; width:200px; color: black;">
+    </i-header>
+    <i-layout>
+      <i-sider style="height: 100px; background:#ddd; width:200px; color: black;">
         sider
-      </g-sider>
-      <g-content style="height: 100px; background:deepskyblue;">
+      </i-sider>
+      <i-content style="height: 100px; background:deepskyblue;">
         content
-      </g-content>
-    </g-layout>
-    <g-footer style="height: 50px; background:lightskyblue;">
+      </i-content>
+    </i-layout>
+    <i-footer style="height: 50px; background:lightskyblue;">
       footer
-    </g-footer>
-</g-layout>
+    </i-footer>
+</i-layout>
 ```
 
 ### 布局三
@@ -69,20 +69,20 @@ title: Layout 布局
 #### 示例代码
 
 ```vue
-<g-layout style="color: white; overflow:hidden; margin-bottom:50px;">
-    <g-sider style=" background:#ddd; width:200px; color: black;">
+<i-layout style="color: white; overflow:hidden; margin-bottom:50px;">
+    <i-sider style=" background:#ddd; width:200px; color: black;">
       sider
-    </g-sider>
-    <g-layout>
-      <g-header style="height: 50px; background:lightskyblue;">
+    </i-sider>
+    <i-layout>
+      <i-header style="height: 50px; background:lightskyblue;">
         header
-      </g-header>
-      <g-content style="height: 100px; background:deepskyblue;">
+      </i-header>
+      <i-content style="height: 100px; background:deepskyblue;">
         content
-      </g-content>
-      <g-footer style="height: 50px; background:lightskyblue;">
+      </i-content>
+      <i-footer style="height: 50px; background:lightskyblue;">
         footer
-      </g-footer>
-    </g-layout>
-</g-layout>
+      </i-footer>
+    </i-layout>
+</i-layout>
 ```

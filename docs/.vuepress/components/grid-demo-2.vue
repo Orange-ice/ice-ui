@@ -1,30 +1,30 @@
 <template>
   <div style="padding-top: 16px;">
-    <g-row class="demoRow" gutter="10">
-      <g-col span="8">
+    <i-row class="demoRow" gutter="10">
+      <i-col span="8">
         <div class="demoCol">8</div>
-      </g-col>
-      <g-col span="8">
+      </i-col>
+      <i-col span="8">
         <div class="demoCol">8</div>
-      </g-col>
-      <g-col span="8">
+      </i-col>
+      <i-col span="8">
         <div class="demoCol">8</div>
-      </g-col>
-    </g-row>
-    <g-row class="demoRow" gutter="10">
-      <g-col span="6">
+      </i-col>
+    </i-row>
+    <i-row class="demoRow" gutter="10">
+      <i-col span="6">
         <div class="demoCol">6</div>
-      </g-col>
-      <g-col span="6">
+      </i-col>
+      <i-col span="6">
         <div class="demoCol">6</div>
-      </g-col>
-      <g-col span="6">
+      </i-col>
+      <i-col span="6">
         <div class="demoCol">6</div>
-      </g-col>
-      <g-col span="6">
+      </i-col>
+      <i-col span="6">
         <div class="demoCol">6</div>
-      </g-col>
-    </g-row>
+      </i-col>
+    </i-row>
 
   </div>
 </template>
@@ -35,8 +35,8 @@ import Col from '../../../src/col'
 
 export default {
   components: {
-    'g-row':Row,
-    'g-col':Col
+    'i-row':Row,
+    'i-col':Col
   },
 }
 </script>

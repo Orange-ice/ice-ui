@@ -1,16 +1,16 @@
 <template>
   <div style="padding-top: 16px;">
-    <g-layout style="color: white; margin-bottom:50px;">
-      <g-header style="height: 50px; background:#9E91F2;">
+    <i-layout style="color: white; margin-bottom:50px;">
+      <i-header style="height: 50px; background:#9E91F2;">
         header
-      </g-header>
-      <g-content style="height: 100px; background:#7B62D9;">
+      </i-header>
+      <i-content style="height: 100px; background:#7B62D9;">
         content
-      </g-content>
-      <g-footer style="height: 50px; background:#9E91F2;">
+      </i-content>
+      <i-footer style="height: 50px; background:#9E91F2;">
         footer
-      </g-footer>
-    </g-layout>
+      </i-footer>
+    </i-layout>
   </div>
 </template>
 <style scoped>
@@ -19,31 +19,13 @@
 }
 </style>
 <script>
-import GLayout from '../../../src/layout'
-import GHeader from '../../../src/header'
-import GFooter from '../../../src/footer'
-import GContent from '../../../src/content'
-import GSider from '../../../src/sider'
+import ILayout from '../../../src/layout'
+import IHeader from '../../../src/header'
+import IFooter from '../../../src/footer'
+import IContent from '../../../src/content'
+import ISider from '../../../src/sider'
 
 export default {
-  components: {GLayout, GHeader, GFooter, GContent, GSider},
-  data () {
-    return {
-      content: `
-          <g-layout style="color: white; margin-bottom:50px;">
-            <g-header style="height: 50px; background:lightskyblue;">
-              header
-            </g-header>
-            <g-content style="height: 100px; background:deepskyblue;">
-              content
-            </g-content>
-            <g-footer style="height: 50px; background:lightskyblue;">
-              footer
-            </g-footer>
-          </g-layout>
-
-      `.replace(/^ {8}/gm, '').trim()
-    }
-  }
+  components: {ILayout, IHeader, IFooter, IContent, ISider},
 }
 </script>

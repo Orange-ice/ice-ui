@@ -1,40 +1,40 @@
 <template>
   <div style="padding-top: 16px;">
 
-    <g-popover position="left" trigger="hover">
-      <g-button>左边弹出</g-button>
+    <i-popover position="left" trigger="hover">
+      <i-button>左边弹出</i-button>
       <template slot="content">
         弹出内容
       </template>
-    </g-popover>
-    <g-popover trigger="hover">
-      <g-button>上方弹出</g-button>
+    </i-popover>
+    <i-popover trigger="hover">
+      <i-button>上方弹出</i-button>
       <template slot="content">
         弹出内容
       </template>
-    </g-popover>
-    <g-popover position="bottom" trigger="hover">
-      <g-button>下方弹出</g-button>
+    </i-popover>
+    <i-popover position="bottom" trigger="hover">
+      <i-button>下方弹出</i-button>
       <template slot="content">
         弹出内容
       </template>
-    </g-popover>
-    <g-popover position="right" trigger="hover">
-      <g-button>右边弹出</g-button>
+    </i-popover>
+    <i-popover position="right" trigger="hover">
+      <i-button>右边弹出</i-button>
       <template slot="content">
         弹出内容
       </template>
-    </g-popover>
+    </i-popover>
 
   </div>
 </template>
 
 <script>
-import GButton from '../../../src/button'
-import GPopover from '../../../src/popover'
+import IButton from '../../../src/button'
+import IPopover from '../../../src/popover'
 
 
 export default {
-  components: {GButton, GPopover},
+  components: {IButton, IPopover},
 }
 </script>

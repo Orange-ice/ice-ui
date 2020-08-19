@@ -20,16 +20,16 @@ data() {
     }
 },
 
-<g-tabs :selected="selected">
-    <g-tabs-head>
-      <g-tabs-item name="1">标题一</g-tabs-item>
-      <g-tabs-item disabled name="2">标题二</g-tabs-item>
-      <g-tabs-item name="3">标题三</g-tabs-item>
-    </g-tabs-head>
-    <g-tabs-body>
-      <g-tabs-pane name="1">内容1</g-tabs-pane>
-      <g-tabs-pane name="2">内容2</g-tabs-pane>
-      <g-tabs-pane name="3">内容3</g-tabs-pane>
-    </g-tabs-body>
-</g-tabs>
+<i-tabs :selected="selected">
+    <i-tabs-head>
+      <i-tabs-item name="1">标题一</i-tabs-item>
+      <i-tabs-item disabled name="2">标题二</i-tabs-item>
+      <i-tabs-item name="3">标题三</i-tabs-item>
+    </i-tabs-head>
+    <i-tabs-body>
+      <i-tabs-pane name="1">内容1</i-tabs-pane>
+      <i-tabs-pane name="2">内容2</i-tabs-pane>
+      <i-tabs-pane name="3">内容3</i-tabs-pane>
+    </i-tabs-body>
+</i-tabs>
 ```

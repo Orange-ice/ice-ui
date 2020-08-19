@@ -29,8 +29,8 @@ import 'ice-vue-ui/dist/index.css'
 export default {
   name: 'app',
   components: {
-    'g-button': Button,
-    'g-icon': Icon
+    'i-button': Button,
+    'i-icon': Icon
   }
 }
 ```
@@ -64,24 +64,24 @@ import {
 
 } from 'ice-vue-ui'
 
-Vue.component('g-button', Button)
-Vue.component('g-icon', Icon)
-Vue.component('g-button-group', ButtonGroup)
-Vue.component('g-input', Input)
-Vue.component('g-row',Row)
-Vue.component('g-col',Col)
-Vue.component('g-layout',Layout)
-Vue.component('g-header',Header)
-Vue.component('g-sider',Sider)
-Vue.component('g-content',Content)
-Vue.component('g-footer',Footer)
+Vue.component('i-button', Button)
+Vue.component('i-icon', Icon)
+Vue.component('i-button-group', ButtonGroup)
+Vue.component('i-input', Input)
+Vue.component('i-row',Row)
+Vue.component('i-col',Col)
+Vue.component('i-layout',Layout)
+Vue.component('i-header',Header)
+Vue.component('i-sider',Sider)
+Vue.component('i-content',Content)
+Vue.component('i-footer',Footer)
 Vue.use(plugin)                           // toast 组件的使用方法
-Vue.component('g-tabs',Tabs)
-Vue.component('g-tabs-head',TabsHead)
-Vue.component('g-tabs-body',TabsBody)
-Vue.component('g-tabs-item',TabsItem)
-Vue.component('g-tabs-pane',TabsPane)
-Vue.component('g-popover',Popover)
-Vue.component('g-collapse',Collapse)
-Vue.component('g-collapse-item',CollapseItem)
+Vue.component('i-tabs',Tabs)
+Vue.component('i-tabs-head',TabsHead)
+Vue.component('i-tabs-body',TabsBody)
+Vue.component('i-tabs-item',TabsItem)
+Vue.component('i-tabs-pane',TabsPane)
+Vue.component('i-popover',Popover)
+Vue.component('i-collapse',Collapse)
+Vue.component('i-collapse-item',CollapseItem)
 ```

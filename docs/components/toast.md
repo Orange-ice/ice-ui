@@ -16,9 +16,9 @@ title: Toast 文字提示
 #### 示例代码
 
 ```vue
-  <g-button @click="$toast('点击弹出提示')">上方弹出</g-button>
-  <g-button @click="$toast('点击弹出提示', {position:'middle'})">中间弹出</g-button>
-  <g-button @click="$toast('点击弹出提示', {position:'bottom'})">下方弹出</g-button>
+  <i-button @click="$toast('点击弹出提示')">上方弹出</i-button>
+  <i-button @click="$toast('点击弹出提示', {position:'middle'})">中间弹出</i-button>
+  <i-button @click="$toast('点击弹出提示', {position:'bottom'})">下方弹出</i-button>
 ```
 
 ### 设置关闭按钮
@@ -34,7 +34,7 @@ title: Toast 文字提示
 ```vue
 <template>
     <div>
-      <g-button @click="onClickButton">上方弹出</g-button>
+      <i-button @click="onClickButton">上方弹出</i-button>
     </div>
 </template>
 <script>
@@ -68,7 +68,7 @@ methods: {
 ```vue
 <template>
     <div>
-      <g-button @click="onClickButton">上方弹出</g-button>
+      <i-button @click="onClickButton">上方弹出</i-button>
     </div>
 </template>
 <script>

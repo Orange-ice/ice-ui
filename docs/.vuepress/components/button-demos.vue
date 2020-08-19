@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
     <div>
-      <g-button>默认按钮</g-button>
-      <g-button icon="settings">默认按钮</g-button>
-      <g-button :loading="loading" @click="loading=!loading">默认按钮</g-button>
+      <i-button>默认按钮</i-button>
+      <i-button icon="settings">默认按钮</i-button>
+      <i-button :loading="loading" @click="loading=!loading">默认按钮</i-button>
     </div>
   </div>
 </template>
@@ -11,7 +11,7 @@
 import Button from '../../../src/button'
 
 export default {
-  components: {'g-button': Button},
+  components: {'i-button': Button},
   data() {
     return {
       loading: true

@@ -16,30 +16,30 @@ title: Popover 弹出框
 #### 示例代码
 
 ```vue
-<g-popover position="left">
-  <g-button>左边弹出</g-button>
+<i-popover position="left">
+  <i-button>左边弹出</i-button>
   <template slot="content">
     <strong style="color: #F1453D">加粗的提示</strong>
   </template>
-</g-popover>
-<g-popover>
-  <g-button>上方弹出</g-button>
+</i-popover>
+<i-popover>
+  <i-button>上方弹出</i-button>
   <template slot="content">
     <a href="https://github.com/Orange-ice/Ice-UI">这是个a链接</a>
   </template>
-</g-popover>
-<g-popover position="bottom">
-  <g-button>下方弹出</g-button>
+</i-popover>
+<i-popover position="bottom">
+  <i-button>下方弹出</i-button>
   <template slot="content">
     普通文本内容
   </template>
-</g-popover>
-<g-popover position="right">
-  <g-button>右边弹出</g-button>
+</i-popover>
+<i-popover position="right">
+  <i-button>右边弹出</i-button>
   <template slot="content">
     普通文本内容
   </template>
-</g-popover>
+</i-popover>
 ```
 
 ### 支持 hover 触发
@@ -53,28 +53,28 @@ title: Popover 弹出框
 #### 示例代码
 
 ```vue
-<g-popover position="left" trigger="hover">
-  <g-button>左边弹出</g-button>
+<i-popover position="left" trigger="hover">
+  <i-button>左边弹出</i-button>
   <template slot="content">
     弹出内容
   </template>
-</g-popover>
-<g-popover trigger="hover">
-  <g-button>上方弹出</g-button>
+</i-popover>
+<i-popover trigger="hover">
+  <i-button>上方弹出</i-button>
   <template slot="content">
     弹出内容
   </template>
-</g-popover>
-<g-popover position="bottom" trigger="hover">
-  <g-button>下方弹出</g-button>
+</i-popover>
+<i-popover position="bottom" trigger="hover">
+  <i-button>下方弹出</i-button>
   <template slot="content">
     弹出内容
   </template>
-</g-popover>
-<g-popover position="right" trigger="hover">
-  <g-button>右边弹出</g-button>
+</i-popover>
+<i-popover position="right" trigger="hover">
+  <i-button>右边弹出</i-button>
   <template slot="content">
     弹出内容
   </template>
-</g-popover>
+</i-popover>
 ```
