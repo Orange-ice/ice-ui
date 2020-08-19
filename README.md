@@ -4,6 +4,9 @@
 ![npm](https://img.shields.io/npm/v/ice-vue-ui)
 ## 介绍
 
+ce-UI 是一个基于 Vue 的 UI 组件库，目前包括有 Button、Tabs、Input、Grid、
+Layout、Toast、Collapse、Popover 组件。项目尚未完工，持续更新中。
+
 ## 开始使用
 
 1. 添加 CSS 样式
@@ -31,15 +34,15 @@ import 'ice-vue-ui/dist/index.css'
 export default {
   name: 'app',
   components: {
-    'g-button': Button,
-    'g-icon': Icon
+    'i-button': Button,
+    'i-icon': Icon
   }
 }
 ```
 ## 文档
 
+[前往官网](https://orange_ice.gitee.io/ice-ui)
+
 ## 联系方式
 
 <a href='mailto:2902978956@qq.com'>Email</a>
-
-## 贡献代码
