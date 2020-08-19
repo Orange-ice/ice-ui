@@ -4,6 +4,12 @@ title:快速上手
 
 # 快速上手
 
+### npm 安装
+
+```bash
+npm i ice-vue-ui -S
+```
+
 ### 开始使用
 
 1. 添加 CSS 样式

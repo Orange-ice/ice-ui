@@ -1,5 +1,5 @@
 module.exports = {
-  base:'/Ice-UI/',
+  base:'/ice-ui/',
   title: 'Ice-UI',
   description: '一个简约、易用的 UI 框架',
   themeConfig: {
@@ -14,7 +14,7 @@ module.exports = {
       {
         title: '入门',
         children: [
-          '/install/',
+          '/introduce/',
           '/get-started/',
         ]
       },
