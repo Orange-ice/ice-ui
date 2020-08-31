@@ -23,6 +23,11 @@ export default {
       this.$refs.popover.addEventListener('mouseleave', this.close)
     }
   },
+  beforeDestroy() {
+    let div = document.querySelector('.content-wrapper')
+    if(div){div.parentNode.removeChild(div)}
+    document.removeEventListener('click', this.onClickDocument)
+  },
   props: {
     position: {
       type: String,
