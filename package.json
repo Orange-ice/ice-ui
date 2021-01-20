@@ -4,11 +4,9 @@
   "description": "一个简易快捷的UI组件库",
   "main": "dist/index.js",
   "scripts": {
-    "start": "parcel index.html --no-cache",
-    "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-minify && karma start --single-run",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit"
   },
   "repository": {
     "type": "git",
@@ -25,10 +23,15 @@
   },
   "homepage": "https://github.com/Orange-ice/Ice-UI#readme",
   "dependencies": {
+    "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-unit-mocha": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/test-utils": "^1.0.3",
     "@vue/component-compiler-utils": "^3.2.0",
     "chai": "^4.2.0",
     "chai-spies": "^1.0.0",
@@ -49,5 +52,10 @@
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
