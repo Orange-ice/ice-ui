@@ -1,27 +1,47 @@
 <template>
-  <div>
-    {{sourceItem.name}}
-    <cascader-item
-      v-for="item in sourceItem.children"
-      v-if="sourceItem.children"
-      :source-item="item"
-    ></cascader-item>
+  <div class="cascaderItem">
+    <div class="left">
+      <div class="label" v-for="item in items" @click="leftSelected = item">
+        {{item.name}}
+      </div>
+    </div>
+    <div class="right" v-if="rightItems">
+      <cascader-item :items="rightItems" />
+    </div>
   </div>
 </template>
 
 <script>
-const cascaderItem = {
+export default {
   name: 'cascaderItem',
-  components: {
-    cascaderItem: cascaderItem
-  },
   props: {
-    sourceItem: {
-      type: Object
+    items: {
+      type: Array
+    }
+  },
+  data() {
+    return {
+      leftSelected: null
+    }
+  },
+  computed: {
+    rightItems() {
+      if(this.leftSelected && this.leftSelected.children) {
+        return this.leftSelected.children
+      } else {
+        return null
+      }
     }
   }
 }
-export default cascaderItem
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.cascaderItem{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  .left{border: solid 1px red;}
+  .right{margin-top: -1px;}
+}
+</style>
